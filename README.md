@@ -1,138 +1,91 @@
-CodeSwitch AI
+# CodeSwitch AI
 
-Turn Any GitHub Repository into a Structured Learning Roadmap
+Turn any public GitHub repository into a structured learning roadmap.
 
-Overview
+## Overview
 
-CodeSwitch AI is an AI-powered developer productivity tool that transforms any public GitHub repository into a structured, beginner-friendly learning guide.
+CodeSwitch AI is an AI-powered developer productivity tool that transforms complex GitHub repositories into structured, beginner-friendly learning guides.
 
-Understanding large open-source repositories is often difficult due to complex architecture, incomplete documentation, and the absence of a clear onboarding path. CodeSwitch AI reduces this friction by analyzing repository metadata and generating a structured breakdown that helps developers understand and contribute more efficiently.
+Open-source projects are powerful but often difficult to navigate due to unclear architecture, incomplete documentation, and lack of onboarding structure. CodeSwitch AI reduces this cognitive overload by analyzing repository metadata and generating an organized breakdown that accelerates understanding and contribution.
 
-Problem Statement
+---
 
-Developers frequently struggle with:
+## Problem
 
-Navigating unfamiliar codebases
+Developers often struggle with:
 
-Understanding system architecture
+- Understanding unfamiliar codebases  
+- Interpreting system architecture  
+- Identifying key modules  
+- Knowing where to start contributing  
 
-Identifying key components
+This results in high onboarding time and reduced participation in open-source development.
 
-Determining where to begin contributing
+---
 
-This leads to high onboarding time and reduced participation in open-source projects.
+## Solution
 
-Solution
+CodeSwitch AI analyzes a public GitHub repository by extracting:
 
-CodeSwitch AI analyzes a public GitHub repository by extracting its README and top-level structure. Using a large language model, it generates:
+- README content  
+- Top-level file and folder structure  
 
-A simplified project summary
+Using a large language model, it generates:
 
-A high-level architecture overview
+- Project summary  
+- Architecture overview  
+- Component breakdown  
+- Technology stack identification  
+- Step-by-step learning roadmap  
+- Contribution starter guide  
 
-A breakdown of core components
+The output is structured and organized to help developers move from exploration to contribution efficiently.
 
-Technology stack identification
+---
 
-A structured learning roadmap
-
-A contribution starter guide
-
-The output is presented in a clear, organized format to accelerate understanding and reduce cognitive overload.
-
-Architecture
+## Architecture
 
 CodeSwitch AI follows a client–server architecture.
 
-Frontend (HTML, CSS, JavaScript)
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- Collects repository URL
+- Displays structured analysis
 
-Accepts repository URL input
+### Backend
+- Python
+- FastAPI
+- Parses repository URL
+- Fetches repository metadata via GitHub REST API
+- Constructs structured AI prompt
+- Calls OpenAI language model
+- Returns structured JSON response
 
-Sends request to backend
+### External Services
+- GitHub REST API
+- OpenAI GPT-4o-mini
 
-Displays structured output
+---
 
-Backend (Python, FastAPI)
+## Technologies Used
 
-Parses repository URL
+### Backend
+- Python
+- FastAPI
+- Requests
+- OpenAI SDK
+- python-dotenv
 
-Fetches README and structure using GitHub REST API
+### Frontend
+- HTML
+- CSS
+- JavaScript
 
-Constructs structured AI prompt
+---
 
-Calls OpenAI language model
-
-Returns structured JSON response
-
-External Services
-
-GitHub REST API
-
-OpenAI GPT-4o-mini
-
-Technologies Used
-
-Backend
-
-Python
-
-FastAPI
-
-Requests
-
-OpenAI SDK
-
-python-dotenv
-
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-APIs
-
-GitHub REST API
-
-OpenAI GPT-4o-mini
-
-Installation
+## Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/codeswitch-ai.git
-cd codeswitch-ai/backend
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Create a .env file in the backend directory:
-
-OPENAI_API_KEY=your_openai_api_key
-GITHUB_TOKEN=your_github_token (optional)
-
-
-Run the backend:
-
-uvicorn main:app --reload
-
-
-Open frontend/index.html in your browser.
-
-
-Future Improvements
-
-Full repository semantic indexing
-
-Skill-level adaptive learning paths
-
-Repository complexity scoring
-
-AI-driven issue recommendations
-
-IDE integration
