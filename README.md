@@ -89,3 +89,28 @@ CodeSwitch AI follows a client–server architecture.
 
 Clone the repository:
 
+git clone https://github.com/your-username/codeswitch-ai.git
+
+cd codeswitch-ai/backend
+
+
+Install dependencies:
+
+
+Create a `.env` file inside the backend directory:
+
+
+Run the backend:
+
+
+Open `frontend/index.html` in your browser.
+
+---
+
+## Future Improvements
+
+- Full repository semantic indexing  
+- Skill-level adaptive learning paths  
+- Repository complexity scoring  
+- AI-driven issue recommendations  
+- IDE integration
